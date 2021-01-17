@@ -13,7 +13,7 @@ def talk(text):
     engine.runAndWait()
 
 
-# sending email
+
 # speech recognizing
 def listen_voice():
     r = sr.Recognizer()
@@ -27,13 +27,13 @@ def listen_voice():
     except Exception as e:
         print(e)
 
-
+# sending email
 def send_email(receiver, subject, message):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login('aloshy812@gmail.com', 'albin812')
+    server.login('sender mail', 'mail password')
     email = EmailMessage()
-    email['from'] = 'aloshy812@gmail.com'
+    email['from'] = 'sender mail'
     email['to'] = receiver
     email['subject'] = subject
     email.set_content(message)
@@ -43,7 +43,7 @@ def send_email(receiver, subject, message):
 # Dictionary of email list of receiver
 email_list = {
     'name': 'mail id',
-    'hello': 'aloshy812@gmail.com'
+    'hello': 'sender mail.com'
 }
 
 
